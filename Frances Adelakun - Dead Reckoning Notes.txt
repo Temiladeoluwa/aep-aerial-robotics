@@ -1,0 +1,16 @@
+﻿What is dead reckoning and how does it apply to aerial robotics?
+Dead reckoning is the process of estimating a UAV’s current position based on its previous position, motion, and the time elapsed. The UAV continuously estimates its motion using sensors such as Inertial Measurement Units (IMUs) and mathematical algorithms to estimate its trajectory. This is useful in environments where GPS signals are unavailable.
+In dead reckoning navigation for UAVs, we also need to account for the effect of wind on positional accuracy, as wind can cause the vehicle to drift from its planned trajectory.
+
+The key idea is that the UAV’s movement relative to the ground is affected by both its movement through the air and the movement of the air itself.
+Sensors used in aerial dead reckoning
+Aerial dead reckoning relies heavily on inertial sensors to estimate the UAV’s motion and orientation. An IMU typically contains:
+* Gyroscope: measures angular velocity
+* Accelerometer: measures linear acceleration
+* Magnetometer: provides information about heading/orientation
+* Barometer: measures atmospheric pressure and can be used to estimate altitude
+Sensor Fusion
+In dead reckoning navigation, sensor fusion involves combining measurements from multiple sensors to obtain a more reliable estimate of the UAV’s state. For example, gyroscope and accelerometer measurements can be combined to estimate orientation, while other sensors can provide additional information about altitude and heading. Filtering methods such as complementary filters, Madgwick filters, and Kalman filters can be used to reduce the effects of sensor noise and drift. The major outcome is to continuously estimate the UAV’s position, velocity, and orientation as it moves through the environment.
+References
+[1] B. Szykuła and J. Furtak, “Dead Reckoning Method for an Unmanned Aerial Vehicle in Conditions of Limited GPS Signal,” TransNav, vol. 19, no. 4, pp. 1063–1068, 2025, doi: 10.12716/1001.19.04.01.
+[2] S. O. H. Madgwick, A. J. L. Harrison, and A. Vaidyanathan, “Estimation of IMU and MARG orientation using a gradient descent algorithm,” 2011 IEEE International Conference on Rehabilitation Robotics, 2011, doi: 10.1109/ICORR.2011.5975346.
